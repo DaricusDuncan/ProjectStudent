@@ -10,7 +10,7 @@ public class StudentClient {
 		 * 
 		 */
 		
-		ArrayList<Student> studentArray = new ArrayList<Student>();
+		List<Student> studentArray = new ArrayList<Student>();
 		
 		/*
 		 * Create Student1 object of type Student
@@ -37,7 +37,10 @@ public class StudentClient {
 		
 		for(int i = 0; i < studentArray.size();i++){
 			
-			studentArray.get(i).getProperties();
+			
+			
+		// USE OVERRIDDEN TOSTRING METHOD
+			System.out.println(studentArray.get(i).toString());
 			
 		}
 		

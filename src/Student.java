@@ -67,15 +67,13 @@ public class Student {
 		return this.birthday;
 	}
 	
-	public void getProperties(){
+	public String toString(){
 		
-		System.out.println(this.getName());
-		System.out.println(this.getMajor());
-		System.out.println(this.getGPA());
-		System.out.println(this.getPhone());
-		System.out.println(this.getBirthday());
-		System.out.println();
+		 //return ("Student name is: %s, Major is: %s, GPA is: %s, Phone number is: %s, Birthday is: %s", this.getName()getClass(), 
+		//		 this.getMajor(), this.getGPA(), this.getPhone(), this.getBirthday());
 		
+		return (String.format("Student name is: %s, Major is: %s, GPA is: %s, Phone number is: %s, Birthday is: %s",
+				this.getName(), this.getMajor(),this.getGPA(),this.getPhone(),this.getBirthday()));
 		
 	}
 	
