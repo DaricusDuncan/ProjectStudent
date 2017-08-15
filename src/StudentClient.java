@@ -45,7 +45,20 @@ public class StudentClient {
 		}
 		
 		
+		Map<Long,Object> studentMap = new HashMap<>();
+		studentMap.put(1111L, student1);
+		studentMap.put(1112L, student2);
+		long testKey = 1111L;
 		
+		if(studentMap.containsKey(testKey)){
+			System.out.println("This works for testing keys!");
+		}
+		testKey++;
+		System.out.println(testKey);
+
+		
+		System.out.print(studentMap.keySet());
+
 		
 
 		
