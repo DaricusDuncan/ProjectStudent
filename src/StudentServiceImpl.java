@@ -22,16 +22,32 @@ public class StudentServiceImpl implements StudentService{
 	}
 
 	
-	public List<Student> saveStudent(List<Student> student)
+	public List<Student> saveStudent(List<Student> studentList)
 	{
 		long idGenerator = 0L;
 		
-		while(studentMap.containsKey(idGenerator)){
+//		if(!studentMap.containsKey(idGenerator)){
+//			for(Object student: studentList){
+//				studentMap.put(idGenerator, student);
+//				idGenerator++;
+//		    }
+//			
+//		}else{
+//			while(studentMap.containsKey(idGenerator)){
+//				idGenerator++;
+//			}
+//		}
+//		
+		
+		for(Object student: studentList){
+			while(studentMap.containsKey(idGenerator)){
 				idGenerator++;
 			}
-		studentMap.put(idGenerator, student);
+			studentMap.put(idGenerator, student);
+		}
 		
-		return student;
+		
+		return studentList;
 	}
 
 	
