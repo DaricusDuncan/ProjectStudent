@@ -44,6 +44,13 @@ public class StudentServiceImpl implements StudentService{
 	
 	public void deleteStudent(Long id) {
 		
+		if(studentMap.containsKey(id)){
+			studentMap.remove(id);
+		}
+		else{
+			System.out.println("Student was not found in the Map");
+		}
+		
 	}
 
 	
