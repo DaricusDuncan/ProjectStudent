@@ -1,7 +1,7 @@
 import java.util.*;
 
 
-public class StudentClient {
+public class StudentClient extends StudentServiceImpl {
 	
 	public static void main(String[] args){
 		
@@ -45,7 +45,7 @@ public class StudentClient {
 		}
 		
 		
-		Map<Long,Object> studentMap = new HashMap<>();
+		/*Map<Long,Object> studentMap = new HashMap<>();
 		studentMap.put(1111L, student1);
 		studentMap.put(1112L, student2);
 		long testKey = 1111L;
@@ -56,10 +56,18 @@ public class StudentClient {
 		testKey++;
 		System.out.println(testKey);
 
-		
+		String testString = "1111";
+		Long testLong = Long.parseLong(testString);	
 		System.out.print(studentMap.keySet());
-
+		System.out.print(studentMap.containsValue(student1));
+		System.out.println(testLong);
+		System.out.println(studentMap.containsKey(testLong));*/
 		
+		StudentService studentServices = new StudentServiceImpl();
+		
+		studentServices.saveStudents(studentArray);
+		
+
 
 		
 	}

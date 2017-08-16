@@ -1,5 +1,6 @@
 import java.util.List;
 import java.util.Map;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class StudentServiceImpl implements StudentService{
@@ -8,17 +9,34 @@ public class StudentServiceImpl implements StudentService{
 	
 	
 	public List<Student> getAllStudents() {
-		return null;
+		List<Student> studentList = new ArrayList<Student>();
+		for(Object each: studentMap.values()){
+			studentList.add((Student)each);
+		}
+		return studentList;
 	}
 
 	
 	public Student getStudentById(Long id) {
-		return null;
+		Student student = new Student();
+		student = (Student) studentMap.get(id);
+		
+		return student;
 	}
 
 	
-	public Student updateStudent(Student student) {
-		return null;
+	public Student updateStudent(String id,Student student) {
+		
+		Long longKey = Long.parseLong(id);
+		if(studentMap.containsKey(longKey)){
+			studentMap.replace(longKey, student);
+			
+		}
+		else{
+			System.out.println("Student could not be updated");
+		}
+		
+		return student;
 	}
 
 	
