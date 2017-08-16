@@ -35,42 +35,18 @@ public class StudentClient extends StudentServiceImpl {
 		studentArray.add(student2);
 		studentArray.add(student3);
 		
-		for(int i = 0; i < studentArray.size();i++){
-			
-			
-			
-		// USE OVERRIDDEN TOSTRING METHOD
-			System.out.println(studentArray.get(i).toString());
-			
-		}
 		
-		
-		/*Map<Long,Object> studentMap = new HashMap<>();
-		studentMap.put(1111L, student1);
-		studentMap.put(1112L, student2);
-		long testKey = 1111L;
-		
-		if(studentMap.containsKey(testKey)){
-			System.out.println("This works for testing keys!");
-		}
-		testKey++;
-		System.out.println(testKey);
-
-		String testString = "1111";
-		Long testLong = Long.parseLong(testString);	
-		System.out.print(studentMap.keySet());
-		System.out.print(studentMap.containsValue(student1));
-		System.out.println(testLong);
-		System.out.println(studentMap.containsKey(testLong));*/
-		
-		StudentServiceImpl studentServices = new StudentServiceImpl();
+		StudentService studentServices = new StudentServiceImpl();
 		
 		studentServices.saveStudents(studentArray);
 		
-		System.out.println(studentServices.getKeys());
 		System.out.println(studentServices.getStudentById(1L));
         studentServices.deleteStudent(1L);
-		System.out.println(studentServices.getKeys());
+        
+        studentServices.updateStudent("1L", student1);
+        
+        System.out.println(studentServices.getAllStudents());
+        
 
 
 		
