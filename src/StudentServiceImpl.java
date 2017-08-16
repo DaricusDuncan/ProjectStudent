@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Map;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 
 public class StudentServiceImpl implements StudentService{
 
@@ -69,6 +69,11 @@ public class StudentServiceImpl implements StudentService{
 			System.out.println("Student was not found in the Map");
 		}
 		
+	}
+	
+	public Set<Long> getKeys(){
+		Set<Long> keySet = studentMap.keySet();
+		return keySet;
 	}
 
 	

@@ -63,10 +63,14 @@ public class StudentClient extends StudentServiceImpl {
 		System.out.println(testLong);
 		System.out.println(studentMap.containsKey(testLong));*/
 		
-		StudentService studentServices = new StudentServiceImpl();
+		StudentServiceImpl studentServices = new StudentServiceImpl();
 		
 		studentServices.saveStudents(studentArray);
 		
+		System.out.println(studentServices.getKeys());
+		System.out.println(studentServices.getStudentById(1L));
+        studentServices.deleteStudent(1L);
+		System.out.println(studentServices.getKeys());
 
 
 		
