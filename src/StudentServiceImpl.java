@@ -5,7 +5,7 @@ import java.util.*;
 
 public class StudentServiceImpl implements StudentService{
 
-	Map<Long,Object> studentMap = new HashMap<>();
+	Map<Long,Student> studentMap = new HashMap<>();
 	
 	
 	public List<Student> getAllStudents() {
@@ -18,10 +18,8 @@ public class StudentServiceImpl implements StudentService{
 
 	
 	public Student getStudentById(Long id) {
-		Student student = new Student();
-		student = (Student) studentMap.get(id);
 		
-		return student;
+		return studentMap.get(id);
 	}
 
 	
@@ -42,21 +40,9 @@ public class StudentServiceImpl implements StudentService{
 	
 	public List<Student> saveStudents(List<Student> students)
 	{
-		long idGenerator = 0L;
 		
-		if(!studentMap.containsKey(idGenerator)){
-			for(Object each: students){
-				studentMap.put(idGenerator, each);
-				idGenerator++;
-		    }
-			
-		}else{
-			while(studentMap.containsKey(idGenerator)){
-				idGenerator++;
-			}
-		}
 		
-		return students;
+		return null;
 	}
 
 	

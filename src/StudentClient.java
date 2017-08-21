@@ -1,7 +1,7 @@
 import java.util.*;
 
 
-public class StudentClient extends StudentServiceImpl {
+public class StudentClient {
 	
 	public static void main(String[] args){
 		
@@ -43,7 +43,7 @@ public class StudentClient extends StudentServiceImpl {
 		System.out.println(studentServices.getStudentById(1L));
         studentServices.deleteStudent(1L);
         
-        studentServices.updateStudent("1L", student1);
+        studentServices.updateStudent("0", student2);
         
         System.out.println(studentServices.getAllStudents());
         
