@@ -41,6 +41,12 @@ public class StudentServiceImpl implements StudentService{
 	public List<Student> saveStudents(List<Student> students)
 	{
 		UUID uid = UUID.randomUUID();
+		
+		for(Student each: students){
+			
+			
+		}
+		
 		return null;
 	}
 
