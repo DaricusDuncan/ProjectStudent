@@ -17,7 +17,7 @@ public class StudentServiceImpl implements StudentService{
 	}
 
 	
-	public Student getStudentById(Long id) {
+	public Student getStudentById(String id) {
 		
 		return studentMap.get(id);
 	}
@@ -51,7 +51,7 @@ public class StudentServiceImpl implements StudentService{
 	}
 
 	
-	public void deleteStudent(Long id) {
+	public void deleteStudent(String id) {
 		
 		if(studentMap.containsKey(id)){
 			studentMap.remove(id);
