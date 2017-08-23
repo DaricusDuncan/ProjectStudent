@@ -36,20 +36,13 @@ public class StudentClient {
 		studentArray.add(student3);
 		
 		
-//		StudentService studentServices = new StudentServiceImpl();
-//		
-//		studentServices.saveStudents(studentArray);
-//		
-//		System.out.println(studentServices.getStudentById(1L));
-//        studentServices.deleteStudent(1L);
-//        
-//        studentServices.updateStudent("0", student2);
-//        
-//        System.out.println(studentServices.getAllStudents());
-//        
-		
-		UUID uid = UUID.randomUUID();
-		System.out.println(uid.hashCode());
+    	StudentService studentServices = new StudentServiceImpl();
+	
+    	studentServices.saveStudents(studentArray);
+    	
+    	System.out.println(studentServices.getAllStudents());
+    	
+    
 
 
 		
