@@ -10,11 +10,8 @@ public class StudentServiceImpl implements StudentService{
 	
 	
 	public List<Student> getAllStudents() {
-		List<Student> studentList = new ArrayList<Student>();
-		for(Student each: studentMap.values()){
-			studentList.add(each);
-		}
-		return studentList;
+		
+		return new ArrayList<>(studentMap.values());
 	}
 
 	
@@ -43,7 +40,8 @@ public class StudentServiceImpl implements StudentService{
 		
 		for(Student each: students){
 			
-			UUID uid = UUID.randomUUID();			
+			UUID uid = UUID.randomUUID();
+			each.setID(uid.toString());
             studentMap.put(uid.toString(), each);
 			
 			

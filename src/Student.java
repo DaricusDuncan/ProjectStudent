@@ -7,6 +7,7 @@ public class Student {
 	private double gpa;
 	private Long phone;
 	private String birthday;
+	private String id;
 	
 	Student(){
 		
@@ -14,13 +15,14 @@ public class Student {
 			
 	}
 	
-	Student(String studentName,String studentMajor,Double studentGPA, Long studentPhone, String studentBirthday){
+	Student(String studentName,String studentMajor,Double studentGPA, Long studentPhone, String studentBirthday,String studentID){
 		
 	this.name = studentName;
 	this.major = studentMajor;
 	this.gpa = studentGPA;
 	this.phone = studentPhone;
 	this.birthday = studentBirthday;
+	this.id = studentID;
 	
 		
 	}
@@ -47,6 +49,10 @@ public class Student {
 		 this.birthday = birthday;
 	}
 	
+	public void setID(String id){
+		this.id = id;
+	}
+	
 	public String getName(){
 		return this.name;
 	}
@@ -67,13 +73,17 @@ public class Student {
 		return this.birthday;
 	}
 	
+	public String getID(){
+		return this.id;
+	}
+	
 	public String toString(){
 		
-		 //return ("Student name is: %s, Major is: %s, GPA is: %s, Phone number is: %s, Birthday is: %s", this.getName()getClass(), 
+		 //return ("Student ID is: %s, Student name is: %s, Major is: %s, GPA is: %s, Phone number is: %s, Birthday is: %s", this.getName(), getClass(), 
 		//		 this.getMajor(), this.getGPA(), this.getPhone(), this.getBirthday());
 		
-		return (String.format("Student name is: %s, Major is: %s, GPA is: %s, Phone number is: %s, Birthday is: %s",
-				this.getName(), this.getMajor(),this.getGPA(),this.getPhone(),this.getBirthday()));
+		return (String.format("Student ID is: %s, Student name is: %s, Major is: %s, GPA is: %s, Phone number is: %s, Birthday is: %s",
+				this.getID(), this.getName(), this.getMajor(),this.getGPA(),this.getPhone(),this.getBirthday()));
 		
 	}
 	
